@@ -11,3 +11,6 @@ Simply run `npm start` from the `app/` directory.
 $ cd zuuby_ui/app
 $ npm start # your browser will open automatically to localhost:3000
 ```
+
+## Credits
+Created my free logo at [LogoMakr](https://logomakr.com)
