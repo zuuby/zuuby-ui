@@ -1,0 +1,15 @@
+{
+  "short_name": "Zuuby UI",
+  "name": "Zuuby User Interface",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "88x59",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
