@@ -1,4 +1,4 @@
-![alt text](./app/src/resources/images/zuuby-logo.png "Zuuby Logo")
+![alt text](https://github.com/zuuby/zuuby-ui/raw/master/app/src/resources/images/zuuby_logo_no_letters_xs.png "Zuuby Logo")
 
 # zuuby-ui
 Front End for zuuby
