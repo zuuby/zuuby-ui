@@ -10,15 +10,21 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">This is only the beginning!</h1>
+          <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
+          <h1 className="App-title">
+            This is only the beginning!
+          </h1>
         </header>
         <div className="App-content">
           <Video src={video} />
         </div>
         <footer className="App-footer">
-          <p>Created my free logo at <a href="https://logomakr.com">LogoMakr.com</a></p>
-          <p>View source at <a href="https://github.com/zuuby/zuuby-ui">Github</a></p>
+          <p>
+            Created my free logo at <a href="https://logomakr.com">LogoMakr.com</a>
+          </p>
+          <p>
+            View source <a href="https://github.com/zuuby/zuuby-ui">Github</a>
+          </p>
         </footer>
       </div>
     );
