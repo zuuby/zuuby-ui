@@ -1,0 +1,15 @@
+.Header-logo {
+  float: left;
+  height: 40px;
+}
+
+.Header {
+  background-color: #000000;
+  height: 40px;
+  padding: 5px;
+  color: white;
+}
+
+.Header-title {
+  font-size: 1em;
+}

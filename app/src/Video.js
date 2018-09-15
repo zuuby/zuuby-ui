@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Video.css';
 
-export default class Video extends React.Component {
+class Video extends React.Component {
   static defaultProps = {
     poster: null,
     src: null,
@@ -49,3 +49,5 @@ export default class Video extends React.Component {
     return <div className="videocontainer" ref="videoplayer" />;
   }
 }
+
+export default Video;
