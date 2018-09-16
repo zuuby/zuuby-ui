@@ -62,10 +62,12 @@ class AppNavbar extends React.Component {
     return (
       <div>
         <Navbar color="dark" dark expand="md">
+          <Container>
             {this.props.logo &&
               <NavbarBrand href="/"><Logo logo={this.props.logo} logoClassName={this.props.logoClassName} /></NavbarBrand>
             }
             {finalnav}
+          </Container>
         </Navbar>
       </div>
     );
