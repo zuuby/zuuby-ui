@@ -6,14 +6,9 @@
 }
 
 .Header-logo {
-  float: left;
   height: 40px;
 }
 
 .Header-title {
   font-size: 1em;
-}
-
-.Header-search {
-  float: right;
 }

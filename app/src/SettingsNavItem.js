@@ -8,7 +8,7 @@ let SettingsNavItem = (props) => {
       <DropdownToggle nav caret>
         <Settings />
       </DropdownToggle>
-      <DropdownMenu right>
+      <DropdownMenu>
         <DropdownItem>
           Option 1
         </DropdownItem>
