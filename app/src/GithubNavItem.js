@@ -1,0 +1,12 @@
+import React from 'react';
+import { NavItem, NavLink } from 'reactstrap';
+
+let GithubNavItem = (props) => {
+  return (
+    <NavItem>
+      <NavLink href={"https://github.com/" + props.owner + "/" + props.repo}>{props.text ? props.text : 'Github'}</NavLink>
+    </NavItem>
+  );
+};
+
+export default GithubNavItem;
