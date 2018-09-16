@@ -1,8 +1,7 @@
 import React from 'react';
 import { Nav } from 'reactstrap';
 import AppNavbar from './AppNavbar';
-import GithubNavItem from './GithubNavItem';
-import SettingsNavItem from './SettingsNavItem';
+import { GithubNavItem, SettingsDropdownNavItem } from './MiscComponents';
 import logo from './resources/images/zuuby_logo_no_letters_xs.png';
 import './Header.css';
 
@@ -26,12 +25,14 @@ class Header extends React.Component {
 
   render() {
     return (
-      <AppNavbar logo={logo} logoClassName='Header-logo'>
-        <Nav className="ml-auto" navbar>
-          <GithubNavItem owner="zuuby" repo="zuuby-ui" />
-          <SettingsNavItem />
-        </Nav>
-      </AppNavbar>
+      <header>
+        <AppNavbar logo={logo} logoClassName='Header-logo' color='dark'>
+          <Nav className="ml-auto" navbar>
+            <GithubNavItem owner="zuuby" repo="zuuby-ui" />
+            <SettingsDropdownNavItem />
+          </Nav>
+        </AppNavbar>
+      </header>
     );
   }
 }

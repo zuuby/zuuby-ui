@@ -6,16 +6,23 @@ import {
   NavbarToggler,
   NavbarBrand } from 'reactstrap';
 
-import Logo from './Logo';
+import { Logo } from './MiscComponents';
 
 class AppNavbar extends React.Component {
   static defaultProps = {
     logo: null,
     logoClassName: '',
 
-    /*Nav behavior*/
+    /* Nav style */
+    light: false,
+    dark: true,
+    color: 'dark',
+
+    /* Nav behavior */
     collapse: true,
-  }
+    expand: 'md',
+  };
+
   constructor(props) {
     super(props);
 
@@ -47,11 +54,12 @@ class AppNavbar extends React.Component {
         However, JSX expect a *single* node to be evaluated (the
          above statement evaluates to two sister nodes.) Keeping
          everything else the same, but evaluating them as an array
-         of two nodes seems to work just fine.
+         of two nodes seems to work just fine. Using an array or
+         iterator requires a 'key' prop which must be unique.
       */
       finalnav = [
-        <NavbarToggler onClick={this.toggle} />,
-        <Collapse isOpen={this.state.isOpen} navbar>
+        <NavbarToggler onClick={this.toggle} key='AppNavBarToggler' />,
+        <Collapse isOpen={this.state.isOpen} navbar key='AppNavBarCollapse' >
           {this.props.children}
         </Collapse>
       ];
@@ -60,16 +68,23 @@ class AppNavbar extends React.Component {
     }
 
     return (
-      <div>
-        <Navbar color="dark" dark expand="md">
+        <Navbar
+        border='true'
+        color={this.props.color}
+        dark={this.props.color === 'dark'}
+        light={this.props.color === 'light'}
+        expand={this.props.expand}>
           <Container>
             {this.props.logo &&
-              <NavbarBrand href="/"><Logo logo={this.props.logo} logoClassName={this.props.logoClassName} /></NavbarBrand>
+              <NavbarBrand href="/">
+                <Logo
+                logo={this.props.logo}
+                logoClassName={this.props.logoClassName} />
+              </NavbarBrand>
             }
             {finalnav}
           </Container>
         </Navbar>
-      </div>
     );
   }
 }
