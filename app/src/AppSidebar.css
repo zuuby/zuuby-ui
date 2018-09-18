@@ -1,0 +1,11 @@
+#sidebar-col {
+  background-color: #00A8FF;
+  transition: all 0.3s;
+  padding: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+#sidebar-col a {
+  color: rgb(255, 255, 255);
+}

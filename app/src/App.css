@@ -2,9 +2,13 @@
 }
 
 .App-content {
-  padding-top: 20px;
   min-height: 700px;
   background-color: white;
+}
+
+.wrapper {
+  display:flex;
+  width: 100%;
 }
 
 @keyframes App-logo-spin {

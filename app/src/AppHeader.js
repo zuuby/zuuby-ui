@@ -1,11 +1,11 @@
 import React from 'react';
-import { Nav } from 'reactstrap';
+import { DropdownItem, Nav } from 'reactstrap';
 import AppNavbar from './AppNavbar';
-import { GithubNavItem, SettingsDropdownNavItem } from './MiscComponents';
+import { GithubNavItem, SettingsDropdownNavItem, UserNavItem } from './MiscComponents';
 import logo from './resources/images/zuuby_logo_no_letters_xs.png';
-import './Header.css';
+import './AppHeader.css';
 
-class Header extends React.Component {
+class AppHeader extends React.Component {
   /*
   handleSearch(searchTerm) {
     $.get('localhost:3000/api/search', {search: searchTerm})
@@ -25,11 +25,23 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
-        <AppNavbar logo={logo} logoClassName='Header-logo' color='dark'>
+      <header className='AppHeader'>
+        <AppNavbar logo={logo} logoClassName='AppHeader-logo' color='dark'>
           <Nav className="ml-auto" navbar>
             <GithubNavItem owner="zuuby" repo="zuuby-ui" />
-            <SettingsDropdownNavItem />
+            <SettingsDropdownNavItem>
+              <DropdownItem>
+                Option 1
+              </DropdownItem>
+              <DropdownItem>
+                Option 2
+              </DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>
+                Reset
+              </DropdownItem>
+            </SettingsDropdownNavItem>
+            <UserNavItem />
           </Nav>
         </AppNavbar>
       </header>
@@ -37,4 +49,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default AppHeader;

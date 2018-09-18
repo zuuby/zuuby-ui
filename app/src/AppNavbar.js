@@ -90,4 +90,4 @@ class AppNavbar extends React.Component {
 }
 
 
-export default AppNavbar
+export default AppNavbar;
