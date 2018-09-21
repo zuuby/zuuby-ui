@@ -19,8 +19,8 @@ export let DropDownNavItem = (props) => {
 
 export let LinkNavItem = (props) => {
   return (
-    <NavItem>
-      <NavLink href={props.link || "#" }>{props.icon || props.text}</NavLink>
+    <NavItem className={props.itemClassName}>
+      <NavLink className={props.linkClassName} href={props.link || "#" } onClick={props.onClick}>{props.icon || props.text}</NavLink>
     </NavItem>
   );
 };

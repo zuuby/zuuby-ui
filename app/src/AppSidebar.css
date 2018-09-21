@@ -1,6 +1,6 @@
 #sidebar-col {
   background-color: #00A8FF;
-  transition: all 0.3s;
+  transition: all 0.2s;
   padding: 0;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -13,4 +13,10 @@
 .sidebar-close {
   position: absolute;
   right: 0;
+}
+
+#sidebar input {
+  padding-left: 10px;
+  border: none;
+  border-radius: 100px;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import $ from 'jquery';
 import { Col, Nav, NavItem, NavLink } from 'reactstrap';
 import { Grid, Headphones, Search, Tv, X } from 'react-feather'
+import { LinkNavItem } from './MiscComponents';
 import './AppSidebar.css';
 
 class AppSidebar extends React.Component {
@@ -17,10 +17,11 @@ class AppSidebar extends React.Component {
       };
   }
 
-  openSidebar() {
+  openSidebar(app='') {
     let newState = Object.assign(this.state);
     newState.colWidth = '3';
     newState.isOpen = true;
+    newState.openApp = app;
     this.setState(newState);
   }
 
@@ -32,37 +33,37 @@ class AppSidebar extends React.Component {
     this.setState(newState);
   }
 
-  onClickNavItem() {
-    this.openSidebar()
+  onClickNavItem(item) {
+    this.openSidebar(item);
   }
 
   onClickClose() {
-    this.closeSidebar()
+    this.closeSidebar();
   }
 
   render() {
     return (
       <Col id='sidebar-col' xs={this.state.colWidth}>
-      {this.state.isOpen &&
-          <a className='sidebar-close' href='#' onClick={this.onClickClose}><X /></a>
-      }
-      <Nav vertical id='sidebar'>
-        <div className='sidebar-header'>
-          <h3>zuuby</h3>
-        </div>
-        <NavItem className='active'>
-          <NavLink href="#" onClick={this.onClickNavItem}><Search /></NavLink>
-        </NavItem>
-        <NavItem className='active'>
-          <NavLink href="#" onClick={this.onClickNavItem}><Grid /></NavLink>
-        </NavItem>
-        <NavItem className='active'>
-          <NavLink href="#" onClick={this.onClickNavItem}><Headphones /></NavLink>
-        </NavItem>
-        <NavItem className='active'>
-          <NavLink href="#" onClick={this.onClickNavItem}><Tv /></NavLink>
-        </NavItem>
-      </Nav>
+        {this.state.isOpen &&
+            <a className='sidebar-close' href='#' onClick={this.onClickClose}><X /></a>
+        }
+        <Nav vertical id='sidebar'>
+          <div className='sidebar-header'>
+            <h3>zuuby</h3>
+            {this.state.isOpen &&
+              <div><input placeholder="NBA Finals 2016"></input><Search /></div>
+            }
+          </div>
+          {!this.state.isOpen &&
+            [<LinkNavItem icon={<Search />} onClick={() => this.onClickNavItem('search')} key='search' />,
+            <LinkNavItem icon={<Grid />} onClick={() => this.onClickNavItem('grid')} key='grid' />,
+            <LinkNavItem icon={<Headphones />} onClick={() => this.onClickNavItem('headphones')} key='headphones' />,
+            <LinkNavItem icon={<Tv />} onClick={() => this.onClickNavItem('tv')} key='tv' />,]
+          }
+          {this.state.isOpen &&
+            <p>No results.</p>
+          }
+        </Nav>
       </Col>
     );
   }
