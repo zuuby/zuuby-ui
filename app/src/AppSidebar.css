@@ -9,3 +9,8 @@
 #sidebar-col a {
   color: rgb(255, 255, 255);
 }
+
+.sidebar-close {
+  position: absolute;
+  right: 0;
+}
