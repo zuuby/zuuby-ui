@@ -1,0 +1,16 @@
+.Video-content {
+
+}
+
+.Video-title {
+  font-weight: bold;
+}
+
+.Video-description {
+  width: 100%;
+}
+
+.Video-description-chevron {
+  position: absolute;
+  right: 0;
+}

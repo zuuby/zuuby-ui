@@ -1,15 +1,22 @@
 import React from 'react';
-import { Col } from 'reactstrap';
-import Video from './Video';
-// NOTE: you must manually put your own local video file here
-import video from './resources/videos/It Ain’t Easy - LeBron James ft. Kevin Durant.mp4'
+import { Col, Container, Row } from 'reactstrap';
+import VideoContent from './VideoContent';
+import './AppContent.css';
 
 class AppContent extends React.Component {
 
   render() {
     return (
-      <Col className="App-content">
-          <Video src={video} />
+      <Col className='App-content'>
+        <Container fluid className='App-content-container'>
+          <Row>
+            <Col> {/* Empty Cols for now*/}
+            </Col>
+            <VideoContent />
+            <Col> {/* Empty Cols for now*/}
+            </Col>
+          </Row>
+        </Container>
       </Col>
     );
   }
